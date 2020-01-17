@@ -18,7 +18,6 @@
 #include "libavutil/opt.h"
 #include "libavutil/samplefmt.h"
 
-// arlo
 #import "common.h"
 #import "AudioStreamMerger.h"
 #import "AudioStreamResampler.h"

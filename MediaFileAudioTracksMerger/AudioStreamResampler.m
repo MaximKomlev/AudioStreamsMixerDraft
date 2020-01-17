@@ -16,7 +16,6 @@
 #include "libavutil/opt.h"
 #include "libswresample/swresample.h"
 
-//arlo
 #import "AudioStreamResampler.h"
 
 @implementation AudioStreamResamplers {
