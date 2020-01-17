@@ -198,7 +198,9 @@
     if (!_resampler_context) {
         return AVERROR(ENOMEM);
     }
+    // TODO:
     av_assert0(_out_codec_context->sample_rate == _in_codec_context->sample_rate);
+    //
     if ((ret = swr_init(_resampler_context)) < 0) {
         swr_free(&_resampler_context);
         return ret;
