@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC0B50CE23C7C22A009AB6D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0B50CD23C7C22A009AB6D3 /* AppDelegate.m */; };
+		BC0B50D423C7C22A009AB6D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0B50D323C7C22A009AB6D3 /* ViewController.m */; };
+		BC0B50D723C7C22A009AB6D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC0B50D523C7C22A009AB6D3 /* Main.storyboard */; };
+		BC0B50D923C7C22C009AB6D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC0B50D823C7C22C009AB6D3 /* Assets.xcassets */; };
+		BC0B50DC23C7C22C009AB6D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC0B50DA23C7C22C009AB6D3 /* LaunchScreen.storyboard */; };
+		BC0B50DF23C7C22C009AB6D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0B50DE23C7C22C009AB6D3 /* main.m */; };
+		BC0B50E923C7C22D009AB6D3 /* MediaFileAudioTracksMergerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0B50E823C7C22D009AB6D3 /* MediaFileAudioTracksMergerTests.m */; };
+		BC0B50F423C7DD14009AB6D3 /* AudioStreamMerger.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0B50F323C7DD14009AB6D3 /* AudioStreamMerger.m */; };
+		BC0B50FF23C7E254009AB6D3 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B50F823C7E225009AB6D3 /* libavformat.a */; };
+		BC0B510023C7E254009AB6D3 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B50FC23C7E225009AB6D3 /* libavcodec.a */; };
+		BC0B510123C7E254009AB6D3 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B50F723C7E225009AB6D3 /* libavdevice.a */; };
+		BC0B510223C7E254009AB6D3 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B50FD23C7E225009AB6D3 /* libavfilter.a */; };
+		BC0B510323C7E254009AB6D3 /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B50FA23C7E225009AB6D3 /* libavresample.a */; };
+		BC0B510423C7E254009AB6D3 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B50FB23C7E225009AB6D3 /* libavutil.a */; };
+		BC0B510523C7E254009AB6D3 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B50F923C7E225009AB6D3 /* libswresample.a */; };
+		BC0B510623C7E254009AB6D3 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B50FE23C7E225009AB6D3 /* libswscale.a */; };
+		BC0B510823C7E25E009AB6D3 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B510723C7E25E009AB6D3 /* VideoToolbox.framework */; };
+		BC0B510A23C7E273009AB6D3 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B510923C7E273009AB6D3 /* Accelerate.framework */; };
+		BC0B510C23C7E278009AB6D3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B510B23C7E278009AB6D3 /* AudioToolbox.framework */; };
+		BC0B510E23C7E27D009AB6D3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B510D23C7E27D009AB6D3 /* AVFoundation.framework */; };
+		BC0B511023C7E284009AB6D3 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B510F23C7E284009AB6D3 /* AVKit.framework */; };
+		BC0B511523C7E2AE009AB6D3 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B511123C7E2AE009AB6D3 /* CoreVideo.framework */; };
+		BC0B511623C7E2AE009AB6D3 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B511223C7E2AE009AB6D3 /* CoreMedia.framework */; };
+		BC0B511723C7E2AE009AB6D3 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B511323C7E2AE009AB6D3 /* CoreAudio.framework */; };
+		BC0B511823C7E2AE009AB6D3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B511423C7E2AE009AB6D3 /* CoreData.framework */; };
+		BC0B511A23C7E2C7009AB6D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B511923C7E2C6009AB6D3 /* CoreGraphics.framework */; };
+		BC0B511C23C7E2D1009AB6D3 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B511B23C7E2D1009AB6D3 /* GLKit.framework */; };
+		BC0B511F23C7E747009AB6D3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B511E23C7E740009AB6D3 /* libz.tbd */; };
+		BC0B512023C7E754009AB6D3 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B511D23C7E734009AB6D3 /* libbz2.tbd */; };
+		BC0B512223C7E778009AB6D3 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B512123C7E76F009AB6D3 /* libiconv.tbd */; };
+		BC0B512923C7EB35009AB6D3 /* build-ffmpeg.sh in Resources */ = {isa = PBXBuildFile; fileRef = BC0B512823C7EB35009AB6D3 /* build-ffmpeg.sh */; };
+		BC0B513223C90E6C009AB6D3 /* AudioStreamResampler.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0B513123C90E6C009AB6D3 /* AudioStreamResampler.m */; };
+		BC0B513B23CA61DE009AB6D3 /* common.c in Sources */ = {isa = PBXBuildFile; fileRef = BC0B513A23CA61DE009AB6D3 /* common.c */; };
+		BC0B515B23CCDD55009AB6D3 /* AudioStreamMixFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0B515A23CCDD55009AB6D3 /* AudioStreamMixFilter.m */; };
+		BC8D44F723D1F6D900561269 /* monotrack_opus_1_track.ogg in Resources */ = {isa = PBXBuildFile; fileRef = BC8D44F523D1F6D900561269 /* monotrack_opus_1_track.ogg */; };
+		BC8D44F823D1F6D900561269 /* multitrack_3_tracks.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BC8D44F623D1F6D900561269 /* multitrack_3_tracks.mp4 */; };
+		BC8D44FA23D1F83F00561269 /* multitrack_2_tracks.mkv in Resources */ = {isa = PBXBuildFile; fileRef = BC8D44F923D1F83F00561269 /* multitrack_2_tracks.mkv */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC0B50E523C7C22D009AB6D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC0B50C123C7C22A009AB6D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC0B50C823C7C22A009AB6D3;
+			remoteInfo = MediaFileAudioTracksMerger;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BC0B50C923C7C22A009AB6D3 /* MediaFileAudioTracksMerger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaFileAudioTracksMerger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC0B50CC23C7C22A009AB6D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BC0B50CD23C7C22A009AB6D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BC0B50D223C7C22A009AB6D3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BC0B50D323C7C22A009AB6D3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BC0B50D623C7C22A009AB6D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BC0B50D823C7C22C009AB6D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC0B50DB23C7C22C009AB6D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BC0B50DD23C7C22C009AB6D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC0B50DE23C7C22C009AB6D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BC0B50E423C7C22D009AB6D3 /* MediaFileAudioTracksMergerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MediaFileAudioTracksMergerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC0B50E823C7C22D009AB6D3 /* MediaFileAudioTracksMergerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediaFileAudioTracksMergerTests.m; sourceTree = "<group>"; };
+		BC0B50EA23C7C22D009AB6D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC0B50F323C7DD14009AB6D3 /* AudioStreamMerger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioStreamMerger.m; sourceTree = "<group>"; };
+		BC0B50F523C7DD94009AB6D3 /* AudioStreamMerger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioStreamMerger.h; sourceTree = "<group>"; };
+		BC0B50F723C7E225009AB6D3 /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavdevice.a; path = MediaFileAudioTracksMerger/thirdparty/ffmpeg/general/build/lib/libavdevice.a; sourceTree = "<group>"; };
+		BC0B50F823C7E225009AB6D3 /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavformat.a; path = MediaFileAudioTracksMerger/thirdparty/ffmpeg/general/build/lib/libavformat.a; sourceTree = "<group>"; };
+		BC0B50F923C7E225009AB6D3 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswresample.a; path = MediaFileAudioTracksMerger/thirdparty/ffmpeg/general/build/lib/libswresample.a; sourceTree = "<group>"; };
+		BC0B50FA23C7E225009AB6D3 /* libavresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavresample.a; path = MediaFileAudioTracksMerger/thirdparty/ffmpeg/general/build/lib/libavresample.a; sourceTree = "<group>"; };
+		BC0B50FB23C7E225009AB6D3 /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavutil.a; path = MediaFileAudioTracksMerger/thirdparty/ffmpeg/general/build/lib/libavutil.a; sourceTree = "<group>"; };
+		BC0B50FC23C7E225009AB6D3 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = MediaFileAudioTracksMerger/thirdparty/ffmpeg/general/build/lib/libavcodec.a; sourceTree = "<group>"; };
+		BC0B50FD23C7E225009AB6D3 /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavfilter.a; path = MediaFileAudioTracksMerger/thirdparty/ffmpeg/general/build/lib/libavfilter.a; sourceTree = "<group>"; };
+		BC0B50FE23C7E225009AB6D3 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswscale.a; path = MediaFileAudioTracksMerger/thirdparty/ffmpeg/general/build/lib/libswscale.a; sourceTree = "<group>"; };
+		BC0B510723C7E25E009AB6D3 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		BC0B510923C7E273009AB6D3 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		BC0B510B23C7E278009AB6D3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		BC0B510D23C7E27D009AB6D3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BC0B510F23C7E284009AB6D3 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		BC0B511123C7E2AE009AB6D3 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		BC0B511223C7E2AE009AB6D3 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		BC0B511323C7E2AE009AB6D3 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		BC0B511423C7E2AE009AB6D3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BC0B511923C7E2C6009AB6D3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BC0B511B23C7E2D1009AB6D3 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		BC0B511D23C7E734009AB6D3 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		BC0B511E23C7E740009AB6D3 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		BC0B512123C7E76F009AB6D3 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		BC0B512323C7E793009AB6D3 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		BC0B512823C7EB35009AB6D3 /* build-ffmpeg.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = "build-ffmpeg.sh"; path = "MediaFileAudioTracksMerger/thirdparty/ffmpeg/general/build-ffmpeg.sh"; sourceTree = "<group>"; };
+		BC0B513023C90E56009AB6D3 /* AudioStreamResampler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioStreamResampler.h; sourceTree = "<group>"; };
+		BC0B513123C90E6C009AB6D3 /* AudioStreamResampler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioStreamResampler.m; sourceTree = "<group>"; };
+		BC0B513923C9A5AC009AB6D3 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		BC0B513A23CA61DE009AB6D3 /* common.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = common.c; sourceTree = "<group>"; };
+		BC0B515923CCDD3D009AB6D3 /* AudioStreamMixFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioStreamMixFilter.h; sourceTree = "<group>"; };
+		BC0B515A23CCDD55009AB6D3 /* AudioStreamMixFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioStreamMixFilter.m; sourceTree = "<group>"; };
+		BC8D44F523D1F6D900561269 /* monotrack_opus_1_track.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = monotrack_opus_1_track.ogg; sourceTree = "<group>"; };
+		BC8D44F623D1F6D900561269 /* multitrack_3_tracks.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = multitrack_3_tracks.mp4; sourceTree = "<group>"; };
+		BC8D44F923D1F83F00561269 /* multitrack_2_tracks.mkv */ = {isa = PBXFileReference; lastKnownFileType = file; path = multitrack_2_tracks.mkv; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC0B50C623C7C22A009AB6D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC0B510423C7E254009AB6D3 /* libavutil.a in Frameworks */,
+				BC0B510223C7E254009AB6D3 /* libavfilter.a in Frameworks */,
+				BC0B510823C7E25E009AB6D3 /* VideoToolbox.framework in Frameworks */,
+				BC0B510C23C7E278009AB6D3 /* AudioToolbox.framework in Frameworks */,
+				BC0B50FF23C7E254009AB6D3 /* libavformat.a in Frameworks */,
+				BC0B511C23C7E2D1009AB6D3 /* GLKit.framework in Frameworks */,
+				BC0B510123C7E254009AB6D3 /* libavdevice.a in Frameworks */,
+				BC0B510623C7E254009AB6D3 /* libswscale.a in Frameworks */,
+				BC0B511523C7E2AE009AB6D3 /* CoreVideo.framework in Frameworks */,
+				BC0B511F23C7E747009AB6D3 /* libz.tbd in Frameworks */,
+				BC0B510023C7E254009AB6D3 /* libavcodec.a in Frameworks */,
+				BC0B511623C7E2AE009AB6D3 /* CoreMedia.framework in Frameworks */,
+				BC0B511723C7E2AE009AB6D3 /* CoreAudio.framework in Frameworks */,
+				BC0B510E23C7E27D009AB6D3 /* AVFoundation.framework in Frameworks */,
+				BC0B511A23C7E2C7009AB6D3 /* CoreGraphics.framework in Frameworks */,
+				BC0B512023C7E754009AB6D3 /* libbz2.tbd in Frameworks */,
+				BC0B510A23C7E273009AB6D3 /* Accelerate.framework in Frameworks */,
+				BC0B511023C7E284009AB6D3 /* AVKit.framework in Frameworks */,
+				BC0B512223C7E778009AB6D3 /* libiconv.tbd in Frameworks */,
+				BC0B510523C7E254009AB6D3 /* libswresample.a in Frameworks */,
+				BC0B510323C7E254009AB6D3 /* libavresample.a in Frameworks */,
+				BC0B511823C7E2AE009AB6D3 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC0B50E123C7C22D009AB6D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BC0B50C023C7C22A009AB6D3 = {
+			isa = PBXGroup;
+			children = (
+				BC0B512823C7EB35009AB6D3 /* build-ffmpeg.sh */,
+				BC0B50CB23C7C22A009AB6D3 /* MediaFileAudioTracksMerger */,
+				BC0B50E723C7C22D009AB6D3 /* MediaFileAudioTracksMergerTests */,
+				BC0B50CA23C7C22A009AB6D3 /* Products */,
+				BC0B50F623C7E224009AB6D3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BC0B50CA23C7C22A009AB6D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC0B50C923C7C22A009AB6D3 /* MediaFileAudioTracksMerger.app */,
+				BC0B50E423C7C22D009AB6D3 /* MediaFileAudioTracksMergerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC0B50CB23C7C22A009AB6D3 /* MediaFileAudioTracksMerger */ = {
+			isa = PBXGroup;
+			children = (
+				BC8D44F923D1F83F00561269 /* multitrack_2_tracks.mkv */,
+				BC8D44F523D1F6D900561269 /* monotrack_opus_1_track.ogg */,
+				BC8D44F623D1F6D900561269 /* multitrack_3_tracks.mp4 */,
+				BC0B50CC23C7C22A009AB6D3 /* AppDelegate.h */,
+				BC0B50CD23C7C22A009AB6D3 /* AppDelegate.m */,
+				BC0B50D223C7C22A009AB6D3 /* ViewController.h */,
+				BC0B50D323C7C22A009AB6D3 /* ViewController.m */,
+				BC0B50D523C7C22A009AB6D3 /* Main.storyboard */,
+				BC0B50D823C7C22C009AB6D3 /* Assets.xcassets */,
+				BC0B50DA23C7C22C009AB6D3 /* LaunchScreen.storyboard */,
+				BC0B50DD23C7C22C009AB6D3 /* Info.plist */,
+				BC0B50DE23C7C22C009AB6D3 /* main.m */,
+				BC0B50F523C7DD94009AB6D3 /* AudioStreamMerger.h */,
+				BC0B50F323C7DD14009AB6D3 /* AudioStreamMerger.m */,
+				BC0B513023C90E56009AB6D3 /* AudioStreamResampler.h */,
+				BC0B513123C90E6C009AB6D3 /* AudioStreamResampler.m */,
+				BC0B513923C9A5AC009AB6D3 /* common.h */,
+				BC0B513A23CA61DE009AB6D3 /* common.c */,
+				BC0B515923CCDD3D009AB6D3 /* AudioStreamMixFilter.h */,
+				BC0B515A23CCDD55009AB6D3 /* AudioStreamMixFilter.m */,
+			);
+			path = MediaFileAudioTracksMerger;
+			sourceTree = "<group>";
+		};
+		BC0B50E723C7C22D009AB6D3 /* MediaFileAudioTracksMergerTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC0B50E823C7C22D009AB6D3 /* MediaFileAudioTracksMergerTests.m */,
+				BC0B50EA23C7C22D009AB6D3 /* Info.plist */,
+			);
+			path = MediaFileAudioTracksMergerTests;
+			sourceTree = "<group>";
+		};
+		BC0B50F623C7E224009AB6D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC0B512323C7E793009AB6D3 /* libc++.tbd */,
+				BC0B512123C7E76F009AB6D3 /* libiconv.tbd */,
+				BC0B511E23C7E740009AB6D3 /* libz.tbd */,
+				BC0B511D23C7E734009AB6D3 /* libbz2.tbd */,
+				BC0B511B23C7E2D1009AB6D3 /* GLKit.framework */,
+				BC0B511923C7E2C6009AB6D3 /* CoreGraphics.framework */,
+				BC0B511323C7E2AE009AB6D3 /* CoreAudio.framework */,
+				BC0B511423C7E2AE009AB6D3 /* CoreData.framework */,
+				BC0B511223C7E2AE009AB6D3 /* CoreMedia.framework */,
+				BC0B511123C7E2AE009AB6D3 /* CoreVideo.framework */,
+				BC0B510F23C7E284009AB6D3 /* AVKit.framework */,
+				BC0B510D23C7E27D009AB6D3 /* AVFoundation.framework */,
+				BC0B510B23C7E278009AB6D3 /* AudioToolbox.framework */,
+				BC0B510923C7E273009AB6D3 /* Accelerate.framework */,
+				BC0B510723C7E25E009AB6D3 /* VideoToolbox.framework */,
+				BC0B50FC23C7E225009AB6D3 /* libavcodec.a */,
+				BC0B50F723C7E225009AB6D3 /* libavdevice.a */,
+				BC0B50FD23C7E225009AB6D3 /* libavfilter.a */,
+				BC0B50F823C7E225009AB6D3 /* libavformat.a */,
+				BC0B50FA23C7E225009AB6D3 /* libavresample.a */,
+				BC0B50FB23C7E225009AB6D3 /* libavutil.a */,
+				BC0B50F923C7E225009AB6D3 /* libswresample.a */,
+				BC0B50FE23C7E225009AB6D3 /* libswscale.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BC0B50C823C7C22A009AB6D3 /* MediaFileAudioTracksMerger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC0B50ED23C7C22D009AB6D3 /* Build configuration list for PBXNativeTarget "MediaFileAudioTracksMerger" */;
+			buildPhases = (
+				BC0B50C523C7C22A009AB6D3 /* Sources */,
+				BC0B50C623C7C22A009AB6D3 /* Frameworks */,
+				BC0B50C723C7C22A009AB6D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MediaFileAudioTracksMerger;
+			productName = MediaFileAudioTracksMerger;
+			productReference = BC0B50C923C7C22A009AB6D3 /* MediaFileAudioTracksMerger.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BC0B50E323C7C22D009AB6D3 /* MediaFileAudioTracksMergerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC0B50F023C7C22D009AB6D3 /* Build configuration list for PBXNativeTarget "MediaFileAudioTracksMergerTests" */;
+			buildPhases = (
+				BC0B50E023C7C22D009AB6D3 /* Sources */,
+				BC0B50E123C7C22D009AB6D3 /* Frameworks */,
+				BC0B50E223C7C22D009AB6D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC0B50E623C7C22D009AB6D3 /* PBXTargetDependency */,
+			);
+			name = MediaFileAudioTracksMergerTests;
+			productName = MediaFileAudioTracksMergerTests;
+			productReference = BC0B50E423C7C22D009AB6D3 /* MediaFileAudioTracksMergerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BC0B50C123C7C22A009AB6D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Maxim Komlev";
+				TargetAttributes = {
+					BC0B50C823C7C22A009AB6D3 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					BC0B50E323C7C22D009AB6D3 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = BC0B50C823C7C22A009AB6D3;
+					};
+				};
+			};
+			buildConfigurationList = BC0B50C423C7C22A009AB6D3 /* Build configuration list for PBXProject "MediaFileAudioTracksMerger" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BC0B50C023C7C22A009AB6D3;
+			productRefGroup = BC0B50CA23C7C22A009AB6D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC0B50C823C7C22A009AB6D3 /* MediaFileAudioTracksMerger */,
+				BC0B50E323C7C22D009AB6D3 /* MediaFileAudioTracksMergerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC0B50C723C7C22A009AB6D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC0B50DC23C7C22C009AB6D3 /* LaunchScreen.storyboard in Resources */,
+				BC0B512923C7EB35009AB6D3 /* build-ffmpeg.sh in Resources */,
+				BC0B50D923C7C22C009AB6D3 /* Assets.xcassets in Resources */,
+				BC8D44F823D1F6D900561269 /* multitrack_3_tracks.mp4 in Resources */,
+				BC8D44FA23D1F83F00561269 /* multitrack_2_tracks.mkv in Resources */,
+				BC8D44F723D1F6D900561269 /* monotrack_opus_1_track.ogg in Resources */,
+				BC0B50D723C7C22A009AB6D3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC0B50E223C7C22D009AB6D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC0B50C523C7C22A009AB6D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC0B50D423C7C22A009AB6D3 /* ViewController.m in Sources */,
+				BC0B515B23CCDD55009AB6D3 /* AudioStreamMixFilter.m in Sources */,
+				BC0B50CE23C7C22A009AB6D3 /* AppDelegate.m in Sources */,
+				BC0B50DF23C7C22C009AB6D3 /* main.m in Sources */,
+				BC0B50F423C7DD14009AB6D3 /* AudioStreamMerger.m in Sources */,
+				BC0B513223C90E6C009AB6D3 /* AudioStreamResampler.m in Sources */,
+				BC0B513B23CA61DE009AB6D3 /* common.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC0B50E023C7C22D009AB6D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC0B50E923C7C22D009AB6D3 /* MediaFileAudioTracksMergerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC0B50E623C7C22D009AB6D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC0B50C823C7C22A009AB6D3 /* MediaFileAudioTracksMerger */;
+			targetProxy = BC0B50E523C7C22D009AB6D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BC0B50D523C7C22A009AB6D3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC0B50D623C7C22A009AB6D3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BC0B50DA23C7C22C009AB6D3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC0B50DB23C7C22C009AB6D3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC0B50EB23C7C22D009AB6D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BC0B50EC23C7C22D009AB6D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC0B50EE23C7C22D009AB6D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AGXB6543AL;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MediaFileAudioTracksMerger/thirdparty/ffmpeg/general/build/include/",
+				);
+				INFOPLIST_FILE = MediaFileAudioTracksMerger/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MediaFileAudioTracksMerger/thirdparty/ffmpeg/general/build/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.bleradarios.test.MediaFileAudioTracksMerger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC0B50EF23C7C22D009AB6D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AGXB6543AL;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MediaFileAudioTracksMerger/thirdparty/ffmpeg/general/build/include/",
+				);
+				INFOPLIST_FILE = MediaFileAudioTracksMerger/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MediaFileAudioTracksMerger/thirdparty/ffmpeg/general/build/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.bleradarios.test.MediaFileAudioTracksMerger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BC0B50F123C7C22D009AB6D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AGXB6543AL;
+				INFOPLIST_FILE = MediaFileAudioTracksMergerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.bleradarios.test.MediaFileAudioTracksMergerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MediaFileAudioTracksMerger.app/MediaFileAudioTracksMerger";
+			};
+			name = Debug;
+		};
+		BC0B50F223C7C22D009AB6D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AGXB6543AL;
+				INFOPLIST_FILE = MediaFileAudioTracksMergerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.bleradarios.test.MediaFileAudioTracksMergerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MediaFileAudioTracksMerger.app/MediaFileAudioTracksMerger";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC0B50C423C7C22A009AB6D3 /* Build configuration list for PBXProject "MediaFileAudioTracksMerger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC0B50EB23C7C22D009AB6D3 /* Debug */,
+				BC0B50EC23C7C22D009AB6D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC0B50ED23C7C22D009AB6D3 /* Build configuration list for PBXNativeTarget "MediaFileAudioTracksMerger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC0B50EE23C7C22D009AB6D3 /* Debug */,
+				BC0B50EF23C7C22D009AB6D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC0B50F023C7C22D009AB6D3 /* Build configuration list for PBXNativeTarget "MediaFileAudioTracksMergerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC0B50F123C7C22D009AB6D3 /* Debug */,
+				BC0B50F223C7C22D009AB6D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BC0B50C123C7C22A009AB6D3 /* Project object */;
+}

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[ArloMediaAudioMerger processing:to:outStreamMapping:]:AudioTrackMerger.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "frame-&gt;pts">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ArloMediaAudioMerger addAudioOutStream:basedOn:outStreamIndex:]:AudioTrackMerger.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "codec_encode_ptr-&gt;capabilities &amp; AV_CODEC_CAP_VARIABLE_FRAME_SIZE">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ArloAudioFrameResampler getResampledFrame:]:AudioFrameResampler.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "output_frame-&gt;data">
+            </PersistentString>
+            <PersistentString
+               value = "av_audio_fifo_size(_fifo)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AudioStreamResampler initResampler]:AudioStreamResampler.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_out_codec_context-&gt;sample_rate">
+            </PersistentString>
+            <PersistentString
+               value = "_in_codec_context-&gt;sample_rate">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AudioStreamResampler getResampledFrame:]:AudioStreamResampler.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "av_audio_fifo_size(_fifo)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ArloMediaAudioMerger writeFrame:to:outStreamMapping:]:AudioTrackMerger.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "frame-&gt;pts">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ArloAudioFrameResampler resampleFrame:done:]:AudioFrameResampler.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "av_audio_fifo_size(_fifo)">
+            </PersistentString>
+            <PersistentString
+               value = "_out_codec_context-&gt;frame_size">
+            </PersistentString>
+            <PersistentString
+               value = "frame-&gt;extended_data">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ArloAudioFrameResampler isResampledFrame]:AudioFrameResampler.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "av_audio_fifo_size(_fifo) &gt;= _out_codec_context-&gt;frame_size">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__51-[AudioStreamMixFilter filterFrame:forStreamIndex:]_block_invoke:AudioStreamMixFilter.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ArloMediaAudioMerger initializeAudioDecodeContext:inStreamIndex:]:AudioTrackMerger.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[AudioStreamMixFilter filterFrame:forStreamIndex:]:AudioStreamMixFilter.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self-&gt;_filtersSrcs">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AudioStreamMerger processingFor:]:AudioStreamMerger.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ArloMediaAudioMerger initializeFilterGraph]:ArloMediaAudioMerger.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "av_get_sample_fmt_name(AAC_SAMPLE_FMT)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__31-[AudioStreamMerger processing]_block_invoke_2:AudioStreamMerger.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self-&gt;ifmt_ctx-&gt;pb">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AudioFrameResampler resampleFrame:done:]:AudioFrameResampler.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
