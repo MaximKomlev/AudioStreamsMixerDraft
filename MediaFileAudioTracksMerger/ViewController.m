@@ -37,7 +37,7 @@ static int AAPLPlayerKVOContext = 0;
     self.view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.title = @"Objective C Audio tracks merger sample";
     
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Media Sources" style:UIBarButtonItemStylePlain target:self action:@selector(buttonNextTouched:)];
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Media Samples" style:UIBarButtonItemStylePlain target:self action:@selector(buttonNextTouched:)];
     self.navigationItem.rightBarButtonItem = rightButton;
 
     AVPlayer *player = [AVPlayer playerWithPlayerItem:NULL];

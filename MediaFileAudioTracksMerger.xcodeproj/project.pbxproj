@@ -37,13 +37,17 @@
 		BC0B511F23C7E747009AB6D3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B511E23C7E740009AB6D3 /* libz.tbd */; };
 		BC0B512023C7E754009AB6D3 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B511D23C7E734009AB6D3 /* libbz2.tbd */; };
 		BC0B512223C7E778009AB6D3 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0B512123C7E76F009AB6D3 /* libiconv.tbd */; };
-		BC0B512923C7EB35009AB6D3 /* build-ffmpeg.sh in Resources */ = {isa = PBXBuildFile; fileRef = BC0B512823C7EB35009AB6D3 /* build-ffmpeg.sh */; };
 		BC0B513223C90E6C009AB6D3 /* AudioStreamResampler.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0B513123C90E6C009AB6D3 /* AudioStreamResampler.m */; };
 		BC0B513B23CA61DE009AB6D3 /* common.c in Sources */ = {isa = PBXBuildFile; fileRef = BC0B513A23CA61DE009AB6D3 /* common.c */; };
 		BC0B515B23CCDD55009AB6D3 /* AudioStreamMixFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0B515A23CCDD55009AB6D3 /* AudioStreamMixFilter.m */; };
-		BC8D44F723D1F6D900561269 /* monotrack_opus_1_track.ogg in Resources */ = {isa = PBXBuildFile; fileRef = BC8D44F523D1F6D900561269 /* monotrack_opus_1_track.ogg */; };
-		BC8D44F823D1F6D900561269 /* multitrack_3_tracks.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BC8D44F623D1F6D900561269 /* multitrack_3_tracks.mp4 */; };
-		BC8D44FA23D1F83F00561269 /* multitrack_2_tracks.mkv in Resources */ = {isa = PBXBuildFile; fileRef = BC8D44F923D1F83F00561269 /* multitrack_2_tracks.mkv */; };
+		BC89C9E423D200660013D97D /* build-ffmpeg-tvos.sh in Resources */ = {isa = PBXBuildFile; fileRef = BC89C9E123D200660013D97D /* build-ffmpeg-tvos.sh */; };
+		BC89C9E523D200660013D97D /* build-ffmpeg-iOS-framework.sh in Resources */ = {isa = PBXBuildFile; fileRef = BC89C9E223D200660013D97D /* build-ffmpeg-iOS-framework.sh */; };
+		BC89C9E623D200660013D97D /* build-ffmpeg.sh in Resources */ = {isa = PBXBuildFile; fileRef = BC89C9E323D200660013D97D /* build-ffmpeg.sh */; };
+		BC89C9EA23D200820013D97D /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BC89C9E823D200820013D97D /* LICENSE */; };
+		BC89C9EB23D200820013D97D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BC89C9E923D200820013D97D /* README.md */; };
+		BC89C9F023D200FA0013D97D /* monotrack_opus_1_track.ogg in Resources */ = {isa = PBXBuildFile; fileRef = BC89C9ED23D200FA0013D97D /* monotrack_opus_1_track.ogg */; };
+		BC89C9F123D200FA0013D97D /* multitrack_3_tracks.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BC89C9EE23D200FA0013D97D /* multitrack_3_tracks.mp4 */; };
+		BC89C9F223D200FA0013D97D /* multitrack_2_tracks.mkv in Resources */ = {isa = PBXBuildFile; fileRef = BC89C9EF23D200FA0013D97D /* multitrack_2_tracks.mkv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,16 +99,20 @@
 		BC0B511E23C7E740009AB6D3 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		BC0B512123C7E76F009AB6D3 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		BC0B512323C7E793009AB6D3 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		BC0B512823C7EB35009AB6D3 /* build-ffmpeg.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = "build-ffmpeg.sh"; path = "MediaFileAudioTracksMerger/thirdparty/ffmpeg/general/build-ffmpeg.sh"; sourceTree = "<group>"; };
 		BC0B513023C90E56009AB6D3 /* AudioStreamResampler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioStreamResampler.h; sourceTree = "<group>"; };
 		BC0B513123C90E6C009AB6D3 /* AudioStreamResampler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioStreamResampler.m; sourceTree = "<group>"; };
 		BC0B513923C9A5AC009AB6D3 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		BC0B513A23CA61DE009AB6D3 /* common.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = common.c; sourceTree = "<group>"; };
 		BC0B515923CCDD3D009AB6D3 /* AudioStreamMixFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioStreamMixFilter.h; sourceTree = "<group>"; };
 		BC0B515A23CCDD55009AB6D3 /* AudioStreamMixFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioStreamMixFilter.m; sourceTree = "<group>"; };
-		BC8D44F523D1F6D900561269 /* monotrack_opus_1_track.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = monotrack_opus_1_track.ogg; sourceTree = "<group>"; };
-		BC8D44F623D1F6D900561269 /* multitrack_3_tracks.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = multitrack_3_tracks.mp4; sourceTree = "<group>"; };
-		BC8D44F923D1F83F00561269 /* multitrack_2_tracks.mkv */ = {isa = PBXFileReference; lastKnownFileType = file; path = multitrack_2_tracks.mkv; sourceTree = "<group>"; };
+		BC89C9E123D200660013D97D /* build-ffmpeg-tvos.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = "build-ffmpeg-tvos.sh"; path = "MediaFileAudioTracksMerger/thirdparty/ffmpeg/general/build-ffmpeg-tvos.sh"; sourceTree = "<group>"; };
+		BC89C9E223D200660013D97D /* build-ffmpeg-iOS-framework.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = "build-ffmpeg-iOS-framework.sh"; path = "MediaFileAudioTracksMerger/thirdparty/ffmpeg/general/build-ffmpeg-iOS-framework.sh"; sourceTree = "<group>"; };
+		BC89C9E323D200660013D97D /* build-ffmpeg.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = "build-ffmpeg.sh"; path = "MediaFileAudioTracksMerger/thirdparty/ffmpeg/general/build-ffmpeg.sh"; sourceTree = "<group>"; };
+		BC89C9E823D200820013D97D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		BC89C9E923D200820013D97D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BC89C9ED23D200FA0013D97D /* monotrack_opus_1_track.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; name = monotrack_opus_1_track.ogg; path = MediaFileAudioTracksMerger/monotrack_opus_1_track.ogg; sourceTree = "<group>"; };
+		BC89C9EE23D200FA0013D97D /* multitrack_3_tracks.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = multitrack_3_tracks.mp4; path = MediaFileAudioTracksMerger/multitrack_3_tracks.mp4; sourceTree = "<group>"; };
+		BC89C9EF23D200FA0013D97D /* multitrack_2_tracks.mkv */ = {isa = PBXFileReference; lastKnownFileType = file; name = multitrack_2_tracks.mkv; path = MediaFileAudioTracksMerger/multitrack_2_tracks.mkv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +158,9 @@
 		BC0B50C023C7C22A009AB6D3 = {
 			isa = PBXGroup;
 			children = (
-				BC0B512823C7EB35009AB6D3 /* build-ffmpeg.sh */,
+				BC89C9EC23D200940013D97D /* samples */,
+				BC89C9E723D2006E0013D97D /* docs */,
+				BC89C9E023D200400013D97D /* scripts */,
 				BC0B50CB23C7C22A009AB6D3 /* MediaFileAudioTracksMerger */,
 				BC0B50E723C7C22D009AB6D3 /* MediaFileAudioTracksMergerTests */,
 				BC0B50CA23C7C22A009AB6D3 /* Products */,
@@ -170,9 +180,6 @@
 		BC0B50CB23C7C22A009AB6D3 /* MediaFileAudioTracksMerger */ = {
 			isa = PBXGroup;
 			children = (
-				BC8D44F923D1F83F00561269 /* multitrack_2_tracks.mkv */,
-				BC8D44F523D1F6D900561269 /* monotrack_opus_1_track.ogg */,
-				BC8D44F623D1F6D900561269 /* multitrack_3_tracks.mp4 */,
 				BC0B50CC23C7C22A009AB6D3 /* AppDelegate.h */,
 				BC0B50CD23C7C22A009AB6D3 /* AppDelegate.m */,
 				BC0B50D223C7C22A009AB6D3 /* ViewController.h */,
@@ -231,6 +238,35 @@
 				BC0B50FE23C7E225009AB6D3 /* libswscale.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC89C9E023D200400013D97D /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				BC89C9E223D200660013D97D /* build-ffmpeg-iOS-framework.sh */,
+				BC89C9E123D200660013D97D /* build-ffmpeg-tvos.sh */,
+				BC89C9E323D200660013D97D /* build-ffmpeg.sh */,
+			);
+			name = scripts;
+			sourceTree = "<group>";
+		};
+		BC89C9E723D2006E0013D97D /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				BC89C9E823D200820013D97D /* LICENSE */,
+				BC89C9E923D200820013D97D /* README.md */,
+			);
+			name = docs;
+			sourceTree = "<group>";
+		};
+		BC89C9EC23D200940013D97D /* samples */ = {
+			isa = PBXGroup;
+			children = (
+				BC89C9ED23D200FA0013D97D /* monotrack_opus_1_track.ogg */,
+				BC89C9EF23D200FA0013D97D /* multitrack_2_tracks.mkv */,
+				BC89C9EE23D200FA0013D97D /* multitrack_3_tracks.mp4 */,
+			);
+			name = samples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,12 +350,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC0B50DC23C7C22C009AB6D3 /* LaunchScreen.storyboard in Resources */,
-				BC0B512923C7EB35009AB6D3 /* build-ffmpeg.sh in Resources */,
 				BC0B50D923C7C22C009AB6D3 /* Assets.xcassets in Resources */,
-				BC8D44F823D1F6D900561269 /* multitrack_3_tracks.mp4 in Resources */,
-				BC8D44FA23D1F83F00561269 /* multitrack_2_tracks.mkv in Resources */,
-				BC8D44F723D1F6D900561269 /* monotrack_opus_1_track.ogg in Resources */,
+				BC89C9E523D200660013D97D /* build-ffmpeg-iOS-framework.sh in Resources */,
+				BC89C9EA23D200820013D97D /* LICENSE in Resources */,
+				BC89C9E423D200660013D97D /* build-ffmpeg-tvos.sh in Resources */,
 				BC0B50D723C7C22A009AB6D3 /* Main.storyboard in Resources */,
+				BC89C9F023D200FA0013D97D /* monotrack_opus_1_track.ogg in Resources */,
+				BC89C9F123D200FA0013D97D /* multitrack_3_tracks.mp4 in Resources */,
+				BC89C9EB23D200820013D97D /* README.md in Resources */,
+				BC89C9F223D200FA0013D97D /* multitrack_2_tracks.mkv in Resources */,
+				BC89C9E623D200660013D97D /* build-ffmpeg.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
