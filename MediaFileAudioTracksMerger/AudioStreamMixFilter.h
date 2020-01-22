@@ -30,7 +30,8 @@
 
 - (id _Nonnull)init;
 
-- (int)initializeWithCodecParams:(NSDictionary<NSNumber *, AVCodecParametersWrap *> *_Nonnull)params;
+- (int)initializeWithCodecParams:(NSDictionary<NSNumber *, AVCodecParametersWrap *> *_Nonnull)params
+              forOutCodecContext:(AVCodecContext *_Nonnull)codecContext;
 
 - (int)filterFrame:(AVFrame *_Nonnull)frame forStreamIndex:(NSNumber *_Nonnull)index;
 - (AVFrame *_Nullable)getFilteredFrameForStreamIndex:(NSNumber *_Nonnull)index errorCode:(int *_Nullable)error;

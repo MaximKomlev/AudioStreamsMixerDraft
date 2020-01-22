@@ -61,7 +61,8 @@
     NSLog(@"AudioStreamMixFilter:dealloc");
 }
 
-- (int)initializeWithCodecParams:(NSDictionary<NSNumber *, AVCodecParametersWrap *> *)params {
+- (int)initializeWithCodecParams:(NSDictionary<NSNumber *, AVCodecParametersWrap *> *_Nonnull)params
+              forOutCodecContext:(AVCodecContext *_Nonnull)codecContext {
     __block int ret = 0;
     
     AVFilterGraph *filter_graph = NULL;
@@ -104,7 +105,7 @@
 
         /* Create the abuffer(s) filter;
         * it will be used for feeding the data into the graph. */
-        enum AVSampleFormat sample_fmt = AV_SAMPLE_FMT_FLTP;
+        enum AVSampleFormat sample_fmt = AAC_SAMPLE_FMT;
         NSMutableArray<NSNumber *> *outSampleRates = [NSMutableArray new];
         __block int i = 0;
         for (NSNumber *key in params) {
@@ -133,15 +134,15 @@
                 }
                 
                 av_opt_set(abuffer_ctx, "channel_layout", ch_layout, AV_OPT_SEARCH_CHILDREN);
-                AVCodec *codec_ptr = avcodec_find_encoder(codecParams->codec_id);
+                AVCodec *codec_ptr = avcodec_find_encoder(codecContext->codec_id);
                 if (codec_ptr &&
                     *(codec_ptr->sample_fmts) != AV_SAMPLE_FMT_NONE &&
                     *(codec_ptr->sample_fmts) != AV_SAMPLE_FMT_NB) {
                     sample_fmt = *(codec_ptr->sample_fmts);
                 }
                 av_opt_set(abuffer_ctx, "sample_fmt", av_get_sample_fmt_name(sample_fmt), AV_OPT_SEARCH_CHILDREN);
-                av_opt_set_q(abuffer_ctx, "time_base", (AVRational){ 1, codecParams->sample_rate }, AV_OPT_SEARCH_CHILDREN);
-                av_opt_set_int(abuffer_ctx, "sample_rate", codecParams->sample_rate, AV_OPT_SEARCH_CHILDREN);
+                av_opt_set_q(abuffer_ctx, "time_base", (AVRational){ 1, codecContext->sample_rate }, AV_OPT_SEARCH_CHILDREN);
+                av_opt_set_int(abuffer_ctx, "sample_rate", codecContext->sample_rate, AV_OPT_SEARCH_CHILDREN);
 
                 if ((ret = avfilter_init_str(abuffer_ctx, NULL)) < 0) {
                     break;
@@ -193,8 +194,7 @@
             break;
         }
 
-        const char * sample_rates = [[self arrayToString:sortedOutSampleRates] UTF8String];
-        const char *options_str = [[NSString stringWithFormat:@"sample_fmts=%s:sample_rates=%s:channel_layouts=%s", av_get_sample_fmt_name(AAC_SAMPLE_FMT), sample_rates, ch_layout] UTF8String];
+        const char *options_str = [[NSString stringWithFormat:@"sample_fmts=%s:sample_rates=%d:channel_layouts=%s", av_get_sample_fmt_name(AAC_SAMPLE_FMT), codecContext->sample_rate, ch_layout] UTF8String];
         if ((ret = avfilter_init_str(aformat_ctx, options_str)) < 0) {
             break;
         }

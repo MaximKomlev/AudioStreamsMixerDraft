@@ -250,7 +250,7 @@ static int interrupt_cb(void *opaque) {
 
 - (void)processing {
     
-//    av_log_set_level(AV_LOG_TRACE);
+    av_log_set_level(AV_LOG_INFO);
         
     const char *in_file_path, *out_file_path;
     __block int ret, i;
@@ -310,7 +310,8 @@ static int interrupt_cb(void *opaque) {
                 break;
             }
 
-            if (in_codecpar->codec_type != AVMEDIA_TYPE_UNKNOWN) {
+            if (in_codecpar->codec_type == AVMEDIA_TYPE_AUDIO ||
+                in_codecpar->codec_type == AVMEDIA_TYPE_VIDEO) {
                 NSNumber *inStreamIndex = [NSNumber numberWithInt:i];
                 NSNumber *streamType = [NSNumber numberWithInt:in_codecpar->codec_type];
 
@@ -364,7 +365,8 @@ static int interrupt_cb(void *opaque) {
         }
         
         // initialize audio frame filters
-        if ((ret = [_filterGraph initializeWithCodecParams:codecParams]) < 0) {
+        if ((ret = [_filterGraph initializeWithCodecParams:codecParams
+                                        forOutCodecContext:_streamContexts.audioEncContext]) < 0) {
             break;
         }
 
@@ -480,14 +482,12 @@ static int interrupt_cb(void *opaque) {
     }
 
     __block int numChannels = 0;
-    NSMutableArray<NSNumber *> *outSampleRates = [NSMutableArray new];
+    __block int minSampleRate = AAC_OUTPUT_SAMPLE_RATE;
     [_streamContexts enumerateKeysAndObjectsUsingBlock:^(NSNumber *key, StreamContext *context, BOOL *stop) {
         AVCodecContext *codecContext = context.audioDecContext;
-        if (codecContext) {
-            NSNumber *sampleRate = [NSNumber numberWithInt:codecContext->sample_rate];
-            if (![outSampleRates containsObject:sampleRate]) {
-                 [outSampleRates addObject:sampleRate];
-            }
+        if (codecContext &&
+            codecContext->sample_rate < minSampleRate) {
+            minSampleRate = codecContext->sample_rate;
         }
         
         AVCodecParameters *codecParams = context.codecParams;
@@ -502,7 +502,7 @@ static int interrupt_cb(void *opaque) {
     out_stream->index = outStreamIndex.intValue;
     
     _streamContexts.audioEncContext = avcodec_alloc_context3(codec_encode_ptr);
-    _streamContexts.audioEncContext->sample_rate = (outSampleRates.count > 0 ? outSampleRates[0].intValue : AAC_OUTPUT_SAMPLE_RATE);
+    _streamContexts.audioEncContext->sample_rate = minSampleRate;
     _streamContexts.audioEncContext->channel_layout = ch_layout_id;
     _streamContexts.audioEncContext->sample_fmt = codec_encode_ptr->sample_fmts[0];
     _streamContexts.audioEncContext->time_base = (AVRational){1, _streamContexts.audioEncContext->sample_rate};
@@ -511,9 +511,7 @@ static int interrupt_cb(void *opaque) {
     _streamContexts.audioEncContext->level = FF_LEVEL_UNKNOWN;
     /* Allow the use of the experimental AAC encoder. */
     _streamContexts.audioEncContext->strict_std_compliance = FF_COMPLIANCE_EXPERIMENTAL;
-    
-    [outSampleRates removeAllObjects];
-    
+        
     out_stream->time_base = (AVRational){1, _streamContexts.audioEncContext->sample_rate};
 
     if (ofmt_ctx->oformat->flags & AVFMT_GLOBALHEADER) {

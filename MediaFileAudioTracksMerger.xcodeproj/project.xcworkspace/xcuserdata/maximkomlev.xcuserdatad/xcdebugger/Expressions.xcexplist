@@ -19,6 +19,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "__65-[AudioStreamMixFilter getFilteredFrameForStreamIndex:errorCode:]_block_invoke:AudioStreamMixFilter.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "*error == AVERROR(EAGAIN)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[ArloAudioFrameResampler getResampledFrame:]:AudioFrameResampler.m">
          <PersistentStrings>
             <PersistentString
@@ -60,13 +68,13 @@
          contextName = "-[ArloAudioFrameResampler resampleFrame:done:]:AudioFrameResampler.m">
          <PersistentStrings>
             <PersistentString
-               value = "av_audio_fifo_size(_fifo)">
+               value = "frame-&gt;extended_data">
             </PersistentString>
             <PersistentString
                value = "_out_codec_context-&gt;frame_size">
             </PersistentString>
             <PersistentString
-               value = "frame-&gt;extended_data">
+               value = "av_audio_fifo_size(_fifo)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -113,6 +121,22 @@
       </ContextState>
       <ContextState
          contextName = "-[AudioFrameResampler resampleFrame:done:]:AudioFrameResampler.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[AudioStreamMerger addNotAudioOutStreamWith:inStreamIndex:]:AudioStreamMerger.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "in_stream-&gt;codecpar">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AudioStreamMerger processing]:AudioStreamMerger.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "in_codecpar-&gt;codec_type">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>

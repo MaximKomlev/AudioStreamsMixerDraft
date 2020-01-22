@@ -115,20 +115,31 @@
 - (int)resampleFrame:(AVFrame *_Nonnull)frame done:(BOOL *)done {
     uint8_t **converted_input_samples = NULL;
     int ret = 0;
-    
+
+    int in_frame_size = frame->nb_samples;
+    /* compute the number of converted samples: buffering is avoided
+    * ensuring that the output buffer will contain at least all the
+    * converted input samples
+    */
+    int64_t out_nb_samples = av_rescale_rnd(in_frame_size, _out_codec_context->sample_rate, _in_codec_context->sample_rate, AV_ROUND_UP);
+
     while (TRUE) {
         /* Initialize the temporary storage for the converted input samples. */
-        if ((ret = [self initConvertedSamples:&converted_input_samples frameSize:frame->nb_samples]) < 0) {
+        if ((ret = [self initConvertedSamples:&converted_input_samples
+                                in_frame_size:in_frame_size
+                               out_frame_size:(int)out_nb_samples]) < 0) {
             return ret;
         }
 
         if ((ret = [self convertSamples:(const uint8_t**)frame->extended_data
                          converted_data:converted_input_samples
-                             frame_size:frame->nb_samples]) < 0) {
+                          in_frame_size:in_frame_size
+                         out_frame_size:(int)out_nb_samples]) < 0) {
             break;
         }
 
-        if ((ret = [self addSamplesToFifo:converted_input_samples frame_size:frame->nb_samples]) < 0) {
+        if ((ret = [self addSamplesToFifo:converted_input_samples
+                               frame_size:(int)out_nb_samples]) < 0) {
             break;
         }
         break;
@@ -198,8 +209,12 @@
         return AVERROR(ENOMEM);
     }
     // TODO:
-    av_assert0(_out_codec_context->sample_rate == _in_codec_context->sample_rate);
+    //av_assert0(_out_codec_context->sample_rate == _in_codec_context->sample_rate);
     //
+    
+    av_opt_set_int(_resampler_context, "in_sample_rate",     _in_codec_context->sample_rate, 0);
+    av_opt_set_int(_resampler_context, "out_sample_rate",    _out_codec_context->sample_rate, 0);
+
     if ((ret = swr_init(_resampler_context)) < 0) {
         swr_free(&_resampler_context);
         return ret;
@@ -215,7 +230,9 @@
     return 0;
 }
 
-- (int)initConvertedSamples:(uint8_t ***)converted_input_samples frameSize:(int)frame_size {
+- (int)initConvertedSamples:(uint8_t ***)converted_input_samples
+              in_frame_size:(int)in_frame_size
+             out_frame_size:(int)out_frame_size {
     int ret;
     if (!(*converted_input_samples = calloc(_out_codec_context->channels,
                                             sizeof(**converted_input_samples)))) {
@@ -224,7 +241,7 @@
 
     if ((ret = av_samples_alloc(*converted_input_samples, NULL,
                                   _out_codec_context->channels,
-                                  frame_size,
+                                  out_frame_size,//frame_size,
                                   _out_codec_context->sample_fmt, 0)) < 0) {
         return ret;
     }
@@ -233,9 +250,10 @@
 
 - (int)convertSamples:(const uint8_t **)input_data
        converted_data:(uint8_t **)converted_data
-           frame_size:(int)frame_size {
+        in_frame_size:(int)in_frame_size
+       out_frame_size:(int)out_frame_size {
     int ret = 0;
-    ret = swr_convert(_resampler_context, converted_data, frame_size, input_data, frame_size);
+    ret = swr_convert(_resampler_context, converted_data, out_frame_size, input_data, in_frame_size);
     return ret;
 }
 

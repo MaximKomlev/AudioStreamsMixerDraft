@@ -51,7 +51,6 @@ int decode(AVCodecContext *avctx, AVFrame *frame, AVPacket *pkt, int *got_frame)
 
 uint64_t validateChannelLayout(uint64_t channelLayout) {
     if (channelLayout == AV_CH_LAYOUT_MONO ||
-        channelLayout == AV_CH_LAYOUT_2POINT1 ||
         channelLayout == AV_CH_LAYOUT_2_1 ||
         channelLayout == AV_CH_LAYOUT_SURROUND ||
         channelLayout == AV_CH_LAYOUT_3POINT1 ||
