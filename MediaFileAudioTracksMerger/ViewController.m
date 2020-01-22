@@ -138,7 +138,7 @@ static int AAPLPlayerKVOContext = 0;
 
     // todo: suport different sumple rate of enc. and dec.
     UIAlertAction* multitrack_2tracksAction = [UIAlertAction
-                         actionWithTitle:@"multitrack_2_tracks.mkv"
+                         actionWithTitle:@"multitrack_2_tracks_variable_sample_rates.mkv"
                          style:UIAlertActionStyleDefault
                          handler:^(UIAlertAction * action)
                          {
@@ -158,17 +158,6 @@ static int AAPLPlayerKVOContext = 0;
         [ac dismissViewControllerAnimated:YES completion:nil];
                          }];
     [ac addAction:multitrack_3tracksAction];
-
-    UIAlertAction* multitrack_diff_sample_rates = [UIAlertAction
-                         actionWithTitle:@"multitrack_diff_sample_rates.mp4"
-                         style:UIAlertActionStyleDefault
-                         handler:^(UIAlertAction * action)
-                         {
-        NSString* path = [[NSBundle mainBundle] pathForResource:@"multitrack_diff_sample_rates" ofType:@"mp4"];
-        [self startTranscoding:path];
-        [ac dismissViewControllerAnimated:YES completion:nil];
-                         }];
-    [ac addAction:multitrack_diff_sample_rates];
 
     [self presentViewController:ac animated:YES completion:nil];
 }
