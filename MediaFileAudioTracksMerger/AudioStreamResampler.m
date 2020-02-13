@@ -238,7 +238,7 @@
 
     if ((ret = av_samples_alloc(*converted_input_samples, NULL,
                                   _out_codec_context->channels,
-                                  out_frame_size,//frame_size,
+                                  out_frame_size,
                                   _out_codec_context->sample_fmt, 0)) < 0) {
         return ret;
     }
