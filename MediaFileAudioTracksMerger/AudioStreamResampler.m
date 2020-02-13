@@ -208,10 +208,7 @@
     if (!_resampler_context) {
         return AVERROR(ENOMEM);
     }
-    // TODO:
-    //av_assert0(_out_codec_context->sample_rate == _in_codec_context->sample_rate);
-    //
-    
+
     av_opt_set_int(_resampler_context, "in_sample_rate",     _in_codec_context->sample_rate, 0);
     av_opt_set_int(_resampler_context, "out_sample_rate",    _out_codec_context->sample_rate, 0);
 
