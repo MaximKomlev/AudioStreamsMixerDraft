@@ -14,9 +14,11 @@ ffmpeg -i multitrack.mp4 -filter_complex '[0:a:0][0:a:1]amix=inputs=2' -c:v copy
 
 Doing similar work through `libavformat`, `libavcodec`, `libswresample`, and `libavfilter` involves stream discovery, per-stream decoders, sample conversion, buffering, filter-graph setup, encoding, timestamp management, and output muxing. This repository is a practical example of how those pieces connect.
 
-## Processing architecture
+## Audio Mixing Pipeline Architecture
 
-![Audio Mixing Pipeline Architecture](Audio Mixing Pipeline Architecture.png)
+The following diagram illustrates how AudioStreamsMixerDraft processes multiple audio tracks using FFmpeg, mixes them into a single AAC stream, and preserves non-audio streams without re-encoding.
+
+![Audio Mixing Pipeline Architecture](./Audio%20Mixing%20Pipeline%20Architecture.png)
 
 The diagram describes the source-code processing flow, not an independent background service.
 
