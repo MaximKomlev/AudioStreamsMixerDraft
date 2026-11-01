@@ -16,34 +16,7 @@ Doing similar work through `libavformat`, `libavcodec`, `libswresample`, and `li
 
 ## Processing architecture
 
-```text
-Input media file (multiple audio tracks, optional video)
-                         |
-                  libavformat demux
-                         |
-             +-----------+-----------+
-             |                       |
-       Audio streams             Non-audio streams
-             |                       |
-       Per-track decoders        Packet remux / copy
-             |                       |
-       AudioStreamResampler           |
-       (libswresample + FIFO)         |
-             |                       |
-       AudioStreamMixFilter           |
-       (abuffer -> amix ->           |
-        aformat -> abuffersink)       |
-             |                       |
-          AAC encoder                |
-             |                       |
-             +-----------+-----------+
-                         |
-                  MP4 output muxer
-                         |
-               Documents/ output file
-                         |
-                 AVPlayer preview
-```
+![Audio Mixing Pipeline Architecture](Audio Mixing Pipeline Architecture.png)
 
 The diagram describes the source-code processing flow, not an independent background service.
 
